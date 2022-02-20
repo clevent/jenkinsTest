@@ -16,7 +16,7 @@ pipeline {
         stage('Deployment OR PRO') {
             when {
               expression {
-                currentBuild.result == 'FAILURE' // null || currentBuild.result == 'SUCCESS' 
+                currentBuild.result == null || currentBuild.result == 'SUCCESS' 
               }
             }
             steps {
