@@ -1,5 +1,5 @@
-echo "these comments from GITHUM repo"
-npipeline {
+echo "these comments from GITHUB repo"
+pipeline {
     agent any
 
     stages {
