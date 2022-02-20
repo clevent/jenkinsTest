@@ -1,1 +1,27 @@
 echo "these comments from GITHUM repo"
+npipeline {
+    agent any
+
+    stages {
+        stage('DEVELOPMENT OR DEV') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('TESTING OR SIT') {
+            steps {
+                echo 'Testing EXECUTED FROM GITHUB REPOSITORY'
+            }
+        }
+        stage('Deployment OR PRO') {
+            when {
+              expression {
+                currentBuild.result == 'FAILURE' // null || currentBuild.result == 'SUCCESS' 
+              }
+            }
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
