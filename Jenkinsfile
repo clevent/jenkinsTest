@@ -21,6 +21,7 @@ pipeline {
             }
             steps {
                 echo 'Deploying....'
+                echo "SUCCESS"
             }
         }
     }
