@@ -11,6 +11,7 @@ pipeline {
         stage('TESTING OR SIT') {
             steps {
                 echo 'Testing EXECUTED FROM GITHUB REPOSITORY'
+                echo 'Delete all execution'
             }
             
         }
